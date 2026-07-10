@@ -1,1 +1,36 @@
-Backend/services/auth/serviceAccountKey.json
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*
+**/.env
+**/.env.*
+
+# Firebase service account keys / credentials
+**/serviceAccountKey.json
+serviceAccountKey.json
+
+# IDEs and OS files
+.DS_Store
+**/.DS_Store
+.vscode/
+**/.vscode/
+.idea/
+**/.idea/
+
+# Log files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Production / build outputs
+dist/
+**/dist/
+build/
+**/build/
