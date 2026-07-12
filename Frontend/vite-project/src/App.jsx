@@ -4,6 +4,9 @@ import auth, { googleProvider } from '../../utils/firebase'
 import api from '../../utils/axios'
 
 function App() {
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+  const [user, setUser] = useState(null)
 
   const handleLogin = async (token) => {
     try {
@@ -15,9 +18,6 @@ function App() {
       throw error
     }
   }
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-  const [user, setUser] = useState(null)
 
   const googleLogin = async () => {
     if (loading) return
