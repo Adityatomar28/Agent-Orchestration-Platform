@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
     "@tailwindcss/vite": "^4.3.2",
     "firebase": "^12.16.0",
+    "react-redux": "^9.3.0",
     "tailwindcss": "^4.3.2"
   }
 }
