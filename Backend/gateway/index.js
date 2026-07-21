@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import proxy from "express-http-proxy";
 import cors from "cors"
 import cookieParser from "cookie-parser";
+import protect from "./middleware/auth.middleware.js";
+import { getcurrentUser } from "./controller/user.controller.js";
 dotenv.config();
 
 const port = process.env.PORT || 8000;
@@ -16,9 +18,11 @@ app.use(cors({
 }))
 
 app.use(cookieParser())
-
 //middleware
 app.use("/auth", proxy(process.env.AUTH_SERVICE_URL))
+app.get("/me", protect, getcurrentUser)
+
+
 
 app.listen(port, () => {
     console.log(`Gateway server is running on port ${port}`);
